@@ -1,0 +1,14 @@
+$ORIGIN smart.electronicaSAS.com.
+$TTL 3H
+@	IN SOA	server.smart.electronicaSAS.com. root@smart.electronicaSAS.com. (
+					0	; serial
+					1D	; refresh
+					1H	; retry
+					1W	; expire
+					3H )	; minimum
+
+
+@	IN	NS	server.smart.electronicaSAS.com.
+;host
+server	IN 	A	192.168.1.59
+www	IN	CNAME	server	

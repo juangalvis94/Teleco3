@@ -1,0 +1,15 @@
+$ORIGIN firewall.electronicaSAS.com.
+$TTL 3H
+@	IN SOA	server.firewall.electronicaSAS.com. root@firewall.electronicaSAS.com. (
+					0	; serial
+					1D	; refresh
+					1H	; retry
+					1W	; expire
+					3H )	; minimum
+
+
+@	IN	NS	server.firewall.electronicaSAS.com.
+;host
+server	IN 	A	192.168.0.71
+server  IN      A       192.168.50.71
+www	IN	CNAME	server	

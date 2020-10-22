@@ -1,0 +1,16 @@
+$ORIGIN 168.192.in-addr.arpa.
+$TTL 3H
+@	IN SOA	server.electronicaSAS.com. root@electronicaSAS.com. (
+					0	; serial
+					1D	; refresh
+					1H	; retry
+					1W	; expire
+					3H )	; minimum
+
+@	IN	NS	server.electronicaSAS.com.
+
+59.1    	  IN      PTR     server.smart.electronicaSAS.com.
+72.50		IN	PTR	server.servicios2.electronicaSAS.com.
+80.50	      IN      PTR     server.servicios1.electronicaSAS.com.
+71.1      IN      PTR     server.firewall.electronicaSAS.com.
+71.50      IN      PTR     server.firewall.electronicaSAS.com.

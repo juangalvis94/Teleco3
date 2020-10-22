@@ -1,0 +1,23 @@
+Vagrant.configure("2") do |config|
+config.vm.define :maquina2 do |maquina2|
+maquina2.vm.box = "bento/centos-7"
+maquina2.vm.network :private_network, ip: "192.168.50.80"
+maquina2.vm.hostname = "maquina2"
+maquina2.vm.provision "shell", path: "maquina2.sh"
+end
+config.vm.define :maquina1 do |maquina1|
+maquina1.vm.box = "bento/centos-7"
+maquina1.vm.network :public_network, ip: "192.168.0.81"
+maquina1.vm.network :private_network, ip: "192.168.50.81"
+maquina1.vm.hostname = "maquina1"
+maquina1.vm.provision "shell", path: "maquina1.sh"
+end
+config.vm.define :maquina3 do |maquina3|
+maquina3.vm.box = "bento/centos-7"
+maquina3.vm.network :private_network, ip: "192.168.50.82"
+maquina3.vm.network :forwarded_port, guest: 80, host:4567
+maquina3.vm.network :forwarded_port, guest: 443, host:4568
+maquina3.vm.hostname = "maquina3"
+maquina3.vm.provision "shell", path: "maquina3.sh"
+end
+end

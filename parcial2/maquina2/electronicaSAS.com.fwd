@@ -1,0 +1,15 @@
+$ORIGIN servicios2.electronicaSAS.com.
+$TTL 3H
+@	IN SOA	server.servicios2.electronicaSAS.com. root@servicios2.electronicaSAS.com. (
+					0	; serial
+					1D	; refresh
+					1H	; retry
+					1W	; expire
+					3H )	; minimum
+
+
+@	IN	NS	server.servicios2.electronicaSAS.com.
+;host
+server	IN 	A	192.168.50.82
+www	IN	CNAME	server
+@	IN	MX	10 electronicaSAS.com	
